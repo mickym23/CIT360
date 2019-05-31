@@ -35,7 +35,7 @@ public class MultiThreading {
 		try {
 			// Passes the increment value to the output method at 1 second intervals
 			for (int i = 0; i < loop.length; i++) {
-				Thread.sleep(1000);
+				Thread.sleep(500);
 				threadOut(loop[i]);
 			}
 		// Two possible exceptions dealt with	
@@ -50,21 +50,65 @@ public class MultiThreading {
 }
      
     // Main method organizes the order in which everything runs
-	public static void main(String[] args) {
-      System.out.println("Beginning Thread Increments");
+ 	public static void main(String[] args) {
+ 	     
+    System.out.println("\n**Beginning Thread Increments**");
+       
+    // Creates new threadLoop class and initiates it
+    Thread thread = new Thread(new threadLoop());
+    thread.start();
+    while (thread.isAlive()) {
+       System.out.println("\tInitiating!");
+       try {
+         // Join method waits until the previous thread is completed 
+ 		 thread.join(700);
+ 	   } catch (InterruptedException e) {
+ 		 e.printStackTrace();
+ 	   }
+    }
+      System.out.println(("Threads Successfully Completed."));
       
-      // Creates new threadLoop class and initiates it
-      Thread thread = new Thread(new threadLoop());
-      thread.start();
-      while (thread.isAlive()) {
-         System.out.println("\tInitiating!");
-         try {
-        	// Join method waits until the previous thread is completed 
-			thread.join(700);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-      }
-     System.out.println((" Threads Successfully Completed."));
-	}
-} 
+      // Implement the Thread class
+	  System.out.println("\n\n*****Head and Shoulders*****");
+	  exThread th = new exThread();
+	  // Initiate the nursery rhyme    
+	  th.start();
+ 	}
+}
+
+/* This class was created to demonstrate 
+ * how a simple nursery rhyme program
+ * can be created showing how strings are
+ * output as threads using the 'extends Thread' class
+ */
+class exThread extends Thread  {  
+	public void run() { 
+	
+	// String array created containing the lyrics
+	String[] loop2 = { 
+			"Head,", 
+			"Shoulders,",
+			"Knees,",
+			"and",
+			"Toes,",
+			"Eyes,", 
+			"Ears,",
+			"Mouth,",
+			"and",
+			"Nose!"
+	};
+	
+	// FOR loop that uses the 'sleep' method to 
+	// stagger the thread output
+    for(int i = 0; i < loop2.length; i++) {
+       try {
+	      sleep(500);
+	   }  catch (InterruptedException e) {
+		  e.printStackTrace();
+	   } 
+       System.out.println("\t" + loop2[i]);
+    } 
+}
+}
+
+
