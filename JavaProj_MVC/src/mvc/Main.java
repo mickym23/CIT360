@@ -2,7 +2,8 @@ package mvc;
 
 import mvc.Controller;
 import java.util.InputMismatchException;
-	public class Main {
+
+public class Main {
 		
 		/* This is the Main class that contains the main method. 
 		 * The main method creates a new Controller object: control. 
@@ -16,7 +17,7 @@ import java.util.InputMismatchException;
 			@SuppressWarnings("unused")
 			Controller control = new Controller();
 			} catch (InputMismatchException e) {
-				System.err.println("Please enter a valid number!");
+				System.out.println("Please enter a valid number!");
 			}
 	    }
 } 
