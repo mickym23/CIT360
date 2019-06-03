@@ -16,6 +16,9 @@ public class Controller{
 	/* This is the Controller class of the MVC Pattern. Here all the 
 	 * data is trafficked through from the Model to the View. It holds the 
 	 * MVC together and connects between all the various classes. 
+	 * 
+	 * Update: Two methods (loginProcess and accountProcess) allows to control
+	 * the program and allow the update of the View while it processes.  
 	 */
 		// Input 
 		Scanner input = new Scanner(System.in);
@@ -70,9 +73,9 @@ public class Controller{
 				// IF loop that determines if the login details are identical to the file's data
 				// This is case-sensitive providing greater security
 				if (username.equals(stringarray.get(0)) && password.equals(stringarray.get(1))) {
-					System.out.print("User Authenticated.");
+					System.out.print("\nUser Authenticated.\n");
 				} else {
-					System.err.print("Access Denied.");
+					System.err.print("\nAccess Denied.\n");
 				}	
 				}
 			
