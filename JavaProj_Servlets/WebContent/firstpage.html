@@ -4,15 +4,26 @@
 <meta charset="ISO-8859-1">
 <title>Student Details</title>
 </head>
+<body>
+<!--  
+	  This is the first HTML file that the program runs first. 
+	  This connects to the "/first" URL that connects it to the 
+	  first Servlet. Here, a couple fields are created and ask
+	  for user input. General details are asked from the student.
+	  Each input has a name that allow the Servlet	
+	  to determine the different fields. A submit button is also
+	  placed to continue to the next HTML document.
+ -->
+ 
 	<form method = "post" action = "/JavaProj_Servlets/first">
 		<h1>Registration Part One</h1>
   		<h2>Student Details</h2>
-		First Name: <input type = "text" name = "fname"></br></br>
-		Last Name: <input type = "text" name = "lname"></br></br>
+		First Name:       <input type = "text" name = "fname"></br></br>
+		Last Name:        <input type = "text" name = "lname"></br></br>
 		Physical Address: <input type = "text" name = "address"></br></br>
-		Email Address: <input type = "text" name = "email"></br></br>
-		Contact Number: <input type = "text" name = "number"></br></br>
-		Date of Birth: <input type = "text" name = "dob"></br>
+		Email Address:    <input type = "text" name = "email"></br></br>
+		Contact Number:   <input type = "text" name = "number"></br></br>
+		Date of Birth:    <input type = "text" name = "dob"></br></br>
 		<input type="submit" value="Next">
 	</form>	
 </body>

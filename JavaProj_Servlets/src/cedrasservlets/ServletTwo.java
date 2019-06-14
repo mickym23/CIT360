@@ -7,6 +7,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/* 	This is the second Servlet.
+ *  This connects to the HTTPServlet which creates two methods (doPost and doGet)
+ *  Here, the second HTML file calls the doPost method which redirects to 
+ *  the doGet method and sets the input received from the HTML.
+ *  The page redirects to the first JSP file (output.jsp).
+ */
+
 @WebServlet("/ServletTwo")
 public class ServletTwo extends HttpServlet {
 	
@@ -17,6 +24,12 @@ public class ServletTwo extends HttpServlet {
     	super();
     }
 
+    // doPost HttpSession Object
+ 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+ 				// Start doGet method
+ 				doGet(request, response);
+ 	}
+    
     // doGet HttpSession Object
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 				
@@ -54,10 +67,6 @@ public class ServletTwo extends HttpServlet {
 				}
 	}
 
-	 // doPost HttpSession Object
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// Start doGet method
-		doGet(request, response);
-	}
+	 
 
 }
