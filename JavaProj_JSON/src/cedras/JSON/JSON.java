@@ -14,6 +14,13 @@ import org.json.simple.parser.ParseException;
 
 public class JSON {
 
+	/* 
+	 * This is my JSON Program. I used json-simple-1.1.1.jar to access
+	 * the JSON library and added it in my Build Path.
+	 * Here in the first part, I create new JSONObjects and JSONArrays 
+	 * and send them to JSONStrings. The main purpose of this is to
+	 * convert objects into JSON form. 
+	 */
 	@SuppressWarnings("unchecked")
 	public static void main(String args[]) {
 		
@@ -97,7 +104,12 @@ public class JSON {
 			 }
 			 
 			 
-			 
+			/*
+			 * This is the second part of the JSON Program.
+			 * I created a file: table.json that contains JSON data
+			 * I use the Parse method and store it in JSONObjects and
+			 * a JSONArray and then output certain information I want.
+			 */
 			/**********************************************************
 			 ********************JSON -> Object************************ 
 			 *********************************************************/
