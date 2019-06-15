@@ -1,0 +1,27 @@
+{
+  "username": "Mikhail",
+  "surname": "Cedras",
+  "byu-id": 12345,
+  "Course Info": [
+    {
+      "Name": "CIT120",
+      "Language": "JavaScript"
+    },
+    {
+      "Name": "CIT260",
+      "Language": "Java"
+    },
+    {
+      "Name": "CIT100",	
+      "Language": "Python" 
+    },
+    {
+      "Name": "CS124",
+      "Language": "C++"
+	}
+  ],
+  "Degrees": {
+    "CS": "Computer Science",
+    "CIT": "Computer Information Technology"
+  }
+}
