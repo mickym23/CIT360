@@ -14,8 +14,8 @@ import java.net.UnknownHostException;
 
 public class HttpUrlCon {
 	/* This program demonstrates how the HTTP/URL connection works.
-	 * A url is given and the BufferedReader and getInputStream collects 
-	 * the HTML data of the url web page and prints it in the console.
+	 * A URL is given and the BufferedReader and getInputStream collects 
+	 * the HTML data of the URL web page and prints it in the console.
 	 * This shows how data can be found and used within a Java application.
 	 * A couple main exceptions were also caught.
 	 */
