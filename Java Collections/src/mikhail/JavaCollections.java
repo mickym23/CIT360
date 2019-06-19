@@ -19,7 +19,7 @@ public class JavaCollections {
 	      System.out.println("\t\t\t\t ArrayList Elements\n");
 	    
 	      // Print Original List
-	      System.out.println("Original ArrayList: " + a1 + "\n");
+	      System.out.println("Original ArrayList: " + a1 +  "\n");
 	     
 	      // Sort and Print the List Alphabetically Ascending
 	      Collections.sort(a1);
