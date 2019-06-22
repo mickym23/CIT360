@@ -38,7 +38,7 @@ public class MainJUnit {
 	@Test
 	public void testAssertFalse() {
 		boolean isSandbox = !(true);
-		assertFalse("Test Failed. Not equal to Boolean False.\n", isSandbox);
+		assertFalse("Test Failed Not equal to Boolean False.\n", isSandbox);
 	}
 
 	@Test
